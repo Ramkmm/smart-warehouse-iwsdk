@@ -10,6 +10,7 @@ import {
   createGallerySet,
   createSideboardSet,
 } from './scene-assets/decor.scene-asset.js';
+import { createWarehouse } from './scene-assets/warehouse.scene-asset.js';
 import {
   createGraphiteCube,
   createGraphiteGem,
@@ -41,6 +42,7 @@ const uikitml = (fileName: string, name: string) => ({
 });
 
 export default defineAssets({
+  warehouse: createWarehouse(),
   'studio-floor': createStudioFloor(),
   stage: createStage(),
   plinth: createPlinth(),
@@ -61,3 +63,4 @@ export default defineAssets({
   'label-select': uikitml('label-select.uikitml', 'Select Label'),
   'label-spin': uikitml('label-spin.uikitml', 'Spin Label'),
 });
+  
