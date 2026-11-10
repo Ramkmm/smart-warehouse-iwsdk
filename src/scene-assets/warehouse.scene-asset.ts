@@ -176,10 +176,23 @@ export function createWarehouse(): Group {
   rightRack.position.set(1.7, 0, -2.5);
   warehouse.add(rightRack);
 
-  // Pallet staging area.
+  // Pallet staging area - right side of the warehouse.
   const pallet = createPallet();
-  pallet.position.set(0, 0, -0.8);
+  pallet.position.set(2.6, 0, -0.8);
   warehouse.add(pallet);
-
   return warehouse;
+}
+// Create one standalone carton for inventory interaction.
+export function createInventoryCarton(): Group {
+  const carton = new Group();
+
+  const box = createBox(
+    [0.55, 0.48, 0.5],
+    cartonMaterials[0],
+  );
+
+  box.position.y = 0.24;
+  carton.add(box);
+
+  return carton;
 }

@@ -10,7 +10,10 @@ import {
   createGallerySet,
   createSideboardSet,
 } from './scene-assets/decor.scene-asset.js';
-import { createWarehouse } from './scene-assets/warehouse.scene-asset.js';
+import {
+  createInventoryCarton,
+  createWarehouse,
+} from './scene-assets/warehouse.scene-asset.js';
 import {
   createGraphiteCube,
   createGraphiteGem,
@@ -43,6 +46,7 @@ const uikitml = (fileName: string, name: string) => ({
 
 export default defineAssets({
   warehouse: createWarehouse(),
+  'inventory-carton': createInventoryCarton(),
   'studio-floor': createStudioFloor(),
   stage: createStage(),
   plinth: createPlinth(),
