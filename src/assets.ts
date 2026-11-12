@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
  * This source code is licensed under the MIT license found in the
@@ -63,6 +63,7 @@ export default defineAssets({
     priority: 'lazy',
   },
   'welcome-panel': uikitml('welcome.uikitml', 'Welcome Panel'),
+  'warehouse-dashboard': uikitml('warehouse-dashboard.uikitml', 'Warehouse AI Dashboard'),
   'label-grab': uikitml('label-grab.uikitml', 'Grab Label'),
   'label-select': uikitml('label-select.uikitml', 'Select Label'),
   'label-spin': uikitml('label-spin.uikitml', 'Spin Label'),

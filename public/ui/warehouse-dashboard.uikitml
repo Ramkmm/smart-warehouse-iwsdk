@@ -1,0 +1,90 @@
+﻿
+<style>
+  .dashboard-root {
+    flex-direction: column;
+    width: 520px;
+    background-color: #111827;
+    border-radius: 18px;
+    padding: 20px;
+    gap: 12px;
+  }
+  .header { flex-direction: column; gap: 4px; }
+  .eyebrow { color: #38bdf8; font-size: 16px; font-weight: 700; }
+  .heading { color: #f8fafc; font-size: 34px; font-weight: 700; }
+  .subtitle { color: #94a3b8; font-size: 14px; }
+  .section-title { color: #38bdf8; font-size: 20px; font-weight: 700; }
+  .metric-row { flex-direction: row; gap: 10px; }
+  .metric-card {
+    width: 235px;
+    flex-direction: column;
+    background-color: #1e293b;
+    border-radius: 10px;
+    padding: 12px;
+    gap: 5px;
+  }
+  .metric-label { color: #f8fafc; font-size: 14px; font-weight: 700; }
+  .metric-value { color: #f8fafc; font-size: 28px; font-weight: 700; }
+  .metric-detail { color: #38bdf8; font-size: 13px; }
+  .shipment-card {
+    flex-direction: column;
+    background-color: #1e293b;
+    border-radius: 10px;
+    padding: 12px;
+    gap: 5px;
+  }
+  .shipment-text { color: #e2e8f0; font-size: 16px; }
+  .supervisor-card {
+    flex-direction: column;
+    background-color: #17352f;
+    border-radius: 10px;
+    padding: 14px;
+    gap: 7px;
+  }
+  .supervisor-title { color: #4ade80; font-size: 21px; font-weight: 700; }
+  .recommendation { color: #f8fafc; font-size: 15px; }
+  .priority { color: #fbbf24; font-size: 15px; font-weight: 700; }
+</style>
+
+<Panel class="dashboard-root">
+  <div class="header">
+    <div class="eyebrow">SMART WAREHOUSE XR</div>
+    <div class="heading">AI Operations Center</div>
+    <div class="subtitle">Multi-Agent Warehouse Monitoring</div>
+  </div>
+  <div class="section-title">WAREHOUSE OVERVIEW</div>
+  <div class="metric-row">
+    <div class="metric-card">
+      <div class="metric-label">Total Inventory</div>
+      <div id="inventory-value" class="metric-value">10</div>
+      <div class="metric-detail">Units in stock</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">Robot Tasks</div>
+      <div id="robot-tasks-value" class="metric-value">1</div>
+      <div class="metric-detail">Pending pick</div>
+    </div>
+  </div>
+  <div class="metric-row">
+    <div class="metric-card">
+      <div class="metric-label">Shipments</div>
+      <div id="shipments-value" class="metric-value">1</div>
+      <div class="metric-detail">Created</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">High Priority</div>
+      <div id="priority-value" class="metric-value">1</div>
+      <div class="metric-detail">Shipment alert</div>
+    </div>
+  </div>
+  <div class="section-title">LOGISTICS AGENT</div>
+  <div class="shipment-card">
+    <div id="shipment-id" class="shipment-text">Shipment: SHIP-001</div>
+    <div id="shipment-destination" class="shipment-text">Destination: Hyderabad</div>
+    <div id="shipment-priority" class="shipment-text">Priority: HIGH | ETA: 2 days</div>
+  </div>
+  <div class="supervisor-card">
+    <div class="supervisor-title">AI SUPERVISOR</div>
+    <div id="recommendation" class="recommendation">Prioritize pending robot picking tasks for high-priority shipments.</div>
+    <div id="decision-priority" class="priority">DECISION PRIORITY: HIGH</div>
+  </div>
+</Panel>
